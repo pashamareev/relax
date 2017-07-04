@@ -1,0 +1,26 @@
+.contacts {
+	iframe {
+		width: 100%;
+		@include media ($mobile) {
+			height: 400px;
+		}
+	}
+	.contact-list {
+		ul {
+			padding: 0;
+			li {
+				list-style: none;
+				color: #9c9a9b;
+				font-size: 18px;
+				line-height: 32px;
+				span {
+					color: #f74f42;
+				}
+				@include media ($mobile) {
+					font-size: 14px;
+					line-height: 22px;
+				}
+			}
+		}
+	}
+}

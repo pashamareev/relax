@@ -1,0 +1,97 @@
+.our-clients {
+	blockquote {
+		border-left: 0;
+		font-size: 16px;
+		color: #9c9a9b;
+		padding: 40px 5vw;
+		text-align: center;
+		@include media ($mobile) {
+			font-size: 14px;
+			padding: 20px 40px 10px;
+		}
+	}
+	.owl-nav {
+		.owl-prev, .owl-next {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: #9c9a9b;
+			color: transparent;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: calc(50% - 25px);
+			transition: 0.5s all;
+			&:hover {
+				background: #f74f42;
+			}
+			@include media ($mobile) {
+				width: 30px;
+				height: 30px;
+				top: calc(50% - 15px);
+			}
+		}
+		.owl-prev {
+			left: 2vw;
+			&:before {
+				content: "\2039";
+				color: #fff;
+				font-size: 30px;
+				position: absolute;
+				top: -8px;
+				left: 10px;
+				transition: 0.5s all;
+			}
+			&:hover {
+				&:before {
+					color: #fff;
+				}
+			}
+		}
+		.owl-next {
+			right: 2vw;
+			&:before {
+				content: "\203a";
+				color: #fff;
+				font-size: 30px;
+				position: absolute;
+				top: -8px;
+				left: 10px;
+				transition: 0.5s all;
+			}
+			&:hover {
+				&:before {
+					color: #fff;
+				}
+			}
+		}
+	}
+	.owl-dots {
+		width: 100%;
+		position: absolute;
+		bottom: 1vw;
+		display: flex;
+		justify-content: center;
+		.owl-dot {
+			width: 12px;
+			height: 12px;
+			background: transparent;
+			border: 2px solid #9c9a9b;
+			border-radius: 50%;
+			margin: 0 5px;
+			@include media ($mobile) {
+				margin: 0 5px;
+				width: 10px;
+				height: 10px;
+			}
+		}
+		.active {
+			background: #9c9a9b;
+			border: 2px solid #9c9a9b;
+		}
+		@include media ($mobile) {
+			bottom: 5px;
+		}
+	}
+}

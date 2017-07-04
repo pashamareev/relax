@@ -1,0 +1,43 @@
+header {
+	background-color: #fff;
+	position: relative;
+	.logo {
+		position: absolute;
+		z-index: 2;
+		img {
+			max-width: 100%;
+			@include media ($mobile) {
+				width: 50%;
+			}
+		}
+	}
+	#navbar {
+		float: right;
+		ul {
+			li {
+				&:last-child {
+					a {
+						margin-right: 0;
+					}
+				}
+				a {
+					font-size: 18px;
+					color: #f74f42;
+					text-decoration: none;
+					padding: 5px 0;
+					margin-right: 20px;
+					font-weight: bold;
+					padding: 12px 16px 15px;
+					transition: 0.3s all;
+					&:hover {
+						color: #fff;
+						background: #f74f42;
+					}
+				}
+			}
+		}
+		@include media ($mobile) {
+			float: none;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+.price {
+	.vk-widget {
+		@include media($mobile) {
+			display: none;
+		}
+	}
+	ul {
+		li {
+			color: #9c9a9b;
+			font-size: 16px;
+			line-height: 23px;
+			&:first-child {
+				color: #f74f42;
+				list-style: none;
+				font-weight: bold;
+
+			}
+		}
+	}
+}

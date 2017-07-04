@@ -1,0 +1,146 @@
+.owl-carousel {
+	.item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.slide {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			p {
+				font-size: 3vw;
+				color: #fff;
+				@include media ($tablet) {
+					font-size: 22px;
+				}
+				@include media ($mobile) {
+					font-size: 18px;
+				}
+			}
+			a {
+				padding: 1vw 1.5vw;
+				background: #ff3f1c;
+				color: #fff;
+				text-transform: uppercase;
+				transition: 0.5s all;
+				text-decoration: none;
+				display: inline-block;
+				margin: 2vw 1vw 0;
+				&:hover {
+					background: #000;
+				}
+				@include media ($tablet) {
+					padding: 5px 10px;
+					font-size: 14px;
+					margin: 0 10px;
+				}
+				@include media ($mobile) {
+					padding: 5px 10px;
+					font-size: 12px;
+					margin: 0 10px;
+				}
+			}
+			@include media ($mobile) {
+				height: 60vw;
+			}
+		}
+	}
+	.owl-nav {
+		.owl-prev, .owl-next {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background: #fff;
+			color: transparent;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: calc(50% - 25px);
+			transition: 0.5s all;
+			&:hover {
+				background: #f74f42;
+			}
+			@include media ($mobile) {
+				width: 30px;
+				height: 30px;
+				top: calc(50% - 15px);
+			}
+		}
+		.owl-prev {
+			left: 2vw;
+			&:before {
+				content: "\2039";
+				color: #f74f42;
+				font-size: 40px;
+				position: absolute;
+				top: -6px;
+				left: 17px;
+				transition: 0.5s all;
+				@include media ($mobile) {
+					font-size: 28px;
+					position: absolute;
+					top: -6px;
+					left: 10px;
+				}
+			}
+			&:hover {
+				&:before {
+					color: #fff;
+				}
+			}
+		}
+		.owl-next {
+			right: 2vw;
+			&:before {
+				content: "\203a";
+				color: #f74f42;
+				font-size: 40px;
+				position: absolute;
+				top: -6px;
+				left: 20px;
+				transition: 0.5s all;
+				@include media ($mobile) {
+					font-size: 28px;
+					position: absolute;
+					top: -6px;
+					left: 10px;
+				}
+			}
+			&:hover {
+				&:before {
+					color: #fff;
+				}
+			}
+		}
+	}
+	.owl-dots {
+		width: 100%;
+		position: absolute;
+		bottom: 1vw;
+		display: flex;
+		justify-content: center;
+		.owl-dot {
+			width: 12px;
+			height: 12px;
+			background: transparent;
+			border: 2px solid #fff;
+			border-radius: 50%;
+			margin: 0 5px;
+			@include media ($mobile) {
+				margin: 0 5px;
+				width: 10px;
+				height: 10px;
+			}
+		}
+		.active {
+			background: #f74f42;
+			border: 2px solid #f74f42;
+		}
+		@include media ($mobile) {
+			bottom: 5px;
+		}
+	}
+}

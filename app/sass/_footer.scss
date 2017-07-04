@@ -1,0 +1,72 @@
+footer {
+	background: #f98c83;
+	padding: 3vw 0;
+	text-align: center;
+	.footer-phone {
+		p {
+			font-size: 2vw;
+			color: #fff;
+			@include media ($mobile) {
+				font-size: 18px;
+			}
+		}
+		a {
+			font-size: 2vw;
+			color: #fff;
+			text-decoration: none;
+			@include media ($mobile) {
+				font-size: 18px;
+			}
+		}
+		i {
+			font-size: 1.7vw;
+			color: #fff;
+			margin-right: 15px;
+			@include media ($mobile) {
+				font-size: 18px;
+				margin-right: 5px;
+			}
+		}
+	}
+	.footer-social {
+		margin-top: 1vw;
+		a {
+			background: #fff;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+			margin: 0 10px;
+			transition: 0.3s all;
+			i {
+				font-size: 30px;
+    		line-height: 50px;
+    		color: #f98c83;
+    		@include media ($mobile) {
+    			font-size: 20px;
+    			line-height: 35px;
+    		}
+			}
+			&:hover {
+				i {
+					transform: scale(1.1);
+					color: #F74F42;
+				}
+			}
+			@include media ($mobile) {
+				width: 35px;
+				height: 35px;
+				margin: 0;
+			}
+		}
+	}
+	.footer-down {
+		margin-top: 2vw;
+		p {
+			font-size: 14px;
+			@include media ($mobile) {
+				font-size: 12px;
+			}
+		}
+	}
+}
